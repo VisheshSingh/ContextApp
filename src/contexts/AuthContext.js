@@ -14,7 +14,10 @@ class AuthContextProvider extends Component {
   render() {
     return (
       <AuthContext.Provider
-        value={{ ...this.state, isAuthenticated: this.toggleAuthentication }}
+        value={{
+          ...this.state,
+          toggleAuthentication: this.toggleAuthentication
+        }}
       >
         {this.props.children}
       </AuthContext.Provider>
